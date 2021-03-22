@@ -1,0 +1,13 @@
+
+#Python Mortgage calculator#
+
+r= input("interest rate")
+r= float(r)
+p= input("principle")
+p= int(p)
+n= input("years of loan")
+n= float(n)
+a= (p*r)*(((1+r)**n))/((1+r)**n)-1 
+a = int(a)
+print(a)
+print(a*n)
