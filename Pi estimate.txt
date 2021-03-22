@@ -1,0 +1,21 @@
+# Python #
+#Code for a simple slow converging estimate of Pi.#
+
+# using N * sin(360/n) / 2  slow convergence to pi #
+
+import math
+
+n = input()
+n = int(n)
+
+y=(math.sin(math.radians(360/n)))
+
+circumference = (y*n)
+
+print(circumference)
+
+ratio = (circumference/2)
+
+print(ratio)
+
+print(math.pi)
