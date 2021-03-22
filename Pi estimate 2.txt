@@ -1,0 +1,12 @@
+# Python #
+#Code for a simple slow converging estimate of Pi. Leibnitz series#
+
+import math
+
+n=input()
+n= int(n)
+leibnitz= [-1/3, 1/5, -1/7, 1/9, -1/11, 1/13, -1/15, 1/17, -1/19, 1/21, -1/23, 1/25, -1/27, 1/29, -1/31, 1/33, -1/35, 1/37]
+leibnitz= sum(leibnitz[0:n]) #Evaluates sum of part of the list#
+pi4= 1+leibnitz
+pi=pi4*4
+print(pi)
