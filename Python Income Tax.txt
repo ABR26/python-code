@@ -1,0 +1,11 @@
+
+# Python Basic income tax program. #
+
+print('Lets calculate your Income Tax What is your income?')
+income = input()
+print((int(income)*0.2) - 2500)
+print('Lets Calculate your National Insurance lets have that income figure once more')
+income = input()
+print((int(income)*0.12) - 992)
+print('Your NI comes out to')
+print((int(income)*0.32) - 3492)
