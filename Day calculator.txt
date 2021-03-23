@@ -1,0 +1,30 @@
+
+#Findings Sundays First Day of the month in Gregorian Calender#
+#If First day of the year is Monday#
+Reference = {
+  1: "Jan",
+  32: "Feb",
+  60: "March",
+  91: "April",
+  121: "May",
+  152:"June",
+  182:"July",
+  213:"August",
+  244:"September",
+  274:"October",
+  305:"November",
+  335:"December",
+    }
+x = [1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335]
+
+for i in x:
+    if i % 7 == 0: #and i == Reference:#
+        print("Sunday the First of "+ Reference[i]+ " 1900")
+
+Year = 1960
+Year = int(Year)
+if Year % 4 == 0:
+    print( "this is a leap year add an extra day to february")
+else:
+    print("Normal year")
+    
