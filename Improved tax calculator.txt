@@ -1,0 +1,29 @@
+
+
+
+
+
+#New Tax Calculator 31/3/21.#
+
+print('Please enter your gross salary')
+x= input()
+y = 37500
+y = int(y)
+x = int(x)
+z = 12500
+z = int(z)
+if x >=y:
+    print('You are a higher rate taxpayer paying income tax of £'+ str(int((x*0.4)-15000)+5000)+' p.a')
+    print('your National Insurance will be £' + str(int((x-8788)*0.12)))
+    print('Your total deductions as a % of gross salary are:')
+    print(((int((x*0.4)-15000)+5000)+int((x-8788)*0.12))/x*100 )
+elif z<x < y:
+    print('You are a lower rate taxpayer paying income tax of £'+ str(int((x*0.2)-2500))+' p.a')
+    print('your National Insurance will be £' + str(int((x-8788)*0.12))+' p.a')
+    print('Your total deductions as a % of gross salary are:')
+    print((int((x*0.2)-2500)+int((x-8788)*0.12))/x*100 )
+elif x<= z:    
+    print('you arent a taxpayer at gross income of £' + str(x)+' p.a')
+    print('your National Insurance will be £ ' + str(int((x-8788)*0.12))+' p.a')
+    print('Your total deductions as a % of gross salary are:')
+    print(int((x-8788)*0.12)/x*100 )
