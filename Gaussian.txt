@@ -1,0 +1,22 @@
+#Python Gaussian estimator#
+#With Z scores and PDF#
+print('Please enter S.D, Mean, Data value') 
+p= input() #Sigma#
+p=int(p)
+u= input() #Mean#
+u=int(u)
+x= input() #Data Point#
+x=int(x)
+
+f = ((1/(p*(2.506628275)))*2.718281)**(-((x-u)**2)/(2*(p**2))) #The Probability Density Function Calculator#
+print('Your PDF scarcity at this value is one in') 
+print(f)
+print('This is a percentage of')
+print(100/int(f))
+
+z = (x - u)/(p) #Z Score#
+
+print('Your Z score at this value and standard deviation is') 
+print(z)
+
+
