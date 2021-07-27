@@ -1,0 +1,15 @@
+#Calculator for estimating when a growth share is too expensive to purchase on a 5 year time horizon#
+#50% margin of error#
+G = 1.28 # assume constant yoy income Growth#
+G = float(G)
+T = 4.5 #Time in years# 
+T = float(T)
+P = 17 #Market mean P.E#
+P = int(P)
+p = 40 #stock P.E#
+p = int(p)
+R = p/P #Ratio of p/P#
+if R*1.5 > (G**T):
+       print('Overpriced')
+else:
+    print(float(G**T))
