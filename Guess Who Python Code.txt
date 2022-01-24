@@ -1,0 +1,59 @@
+
+
+# Guess Who decision tree 
+
+
+print("This simple decision tree program is designed to systematically squeeze the joy and spontaneity from the popular game Guess Who") 
+
+print("1. Does your character have facial addornments ie Ribbons/Glasses/Earrings/Hats")
+x = input("")
+print('if yes go to question 2 if no go to question 3')
+
+print('2. Does your character wear a hat')
+y = input("") 
+print('if yes go to question 4 if no go to question 5')
+
+print('3. Does your characters name start with a letter between A - M')
+z = input("") 
+print('if yes go to question 6 if no go to question 7')
+
+print('4. Is your character a man?')
+a = input("")
+print('if yes go to question 8 if no your character is Marie or Claire')
+
+print('5. Does your character have black eyebrows')
+b = input("") 
+print('if yes go to question 9 if no go to question 10')
+
+print('6. Does your character have a moustache')
+c = input("")
+print('if yes go to question 11 if no go to question 12')
+
+print('7. Does your character have White Hair')
+d = input("")
+print('if yes your character is Susan or Peter if no go to question 13')
+
+print('8. Is your character blonde?')
+e = input("")
+print('if yes your character is Eric if no your character is George or Bernhard')
+
+print('9. Is your character a woman?')
+f = input("")
+print('if yes your character is Anna if no your character is Tom or Sam')
+
+print('10. Does your characters have glasses?')
+g = input("")
+print('if yes your character is Joe or Paul if no your character is Anita')
+
+print('11. Does your characters name begin with an A?')
+h = input("")
+print('if yes your character is Alex or Alfred if no your character is Max or Charles')
+
+print('12. Is your character Bald?')
+i = input("")
+print('if yes your character is Bill or Herman if no your character is Franz or David')
+
+print('13. Does your character have a beard?')
+j = input("")
+print('if yes your character is Philip or Richard if no your character is Robert')
+
