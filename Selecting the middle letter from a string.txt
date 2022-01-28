@@ -1,0 +1,10 @@
+
+
+# Selecting the middle letter from a string#
+
+a = "HelloWorld"
+print(len(a))
+b = len(a)
+c = int(b/2)
+print (c)
+print(a[(c-1):c])
