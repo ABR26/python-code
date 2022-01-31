@@ -1,0 +1,10 @@
+
+# Type check code #
+
+a=5
+b=6
+def my_int():
+    if type(a)==int and type(b)==int:
+         print('True') 
+    else:
+        print('False')
