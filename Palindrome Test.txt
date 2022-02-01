@@ -1,0 +1,11 @@
+txt = 'HannaH'
+
+def Palindrome_test():
+    
+    if txt==txt[::-1]:
+	    print('True')
+    else:
+        print('Not a palindrome')
+exit    
+
+Palindrome_test()
