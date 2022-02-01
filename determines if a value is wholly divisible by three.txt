@@ -1,0 +1,14 @@
+#A filter which determines if a value is wholly divisible by three.#
+
+x=98
+
+def div_3():
+	if x%3 == 0:
+		print('True')
+	else:
+			print('False')
+exit
+
+#Calling the function#
+
+div_3()
