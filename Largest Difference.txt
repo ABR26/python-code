@@ -1,0 +1,9 @@
+#This program pulls the max and min values from a list and returns the difference between them#
+
+thislist = [1,2,4,3,7, 3, 13 ]
+
+def largest_difference():
+    print(max(thislist)-min(thislist))
+exit
+
+largest_difference()
