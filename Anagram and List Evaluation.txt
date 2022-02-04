@@ -1,0 +1,50 @@
+
+#This code evaluates if two words are Anagrams#
+
+#First Word add up the values of the first word#
+x = 'k'
+y = 'e'
+z = 'l'
+a = 'o'
+b = 'o'
+c = 'r'
+Valuefirst = int(ord(x)+ord(y)+ord(z)+ord(a)+ord(b)+ord(c))
+
+print('The Ordinary value of the first word is')
+print(Valuefirst)
+
+#Second Word add up the values of the second word#
+d = 'r'
+e = 'e'
+f = 'l'
+g = 'o'
+h = 'o'
+i = 'k'
+Valuesecond = int(ord(d)+ord(e)+ord(f)+ord(g)+ord(h)+ord(i))
+
+print('The Ordinary value of the second word is')
+print(Valuesecond)
+
+def is_anagram():
+    if  Valuefirst==Valuesecond :
+        print(True)
+    else:
+        print(False)        
+    
+is_anagram()  
+
+
+#This code evaluates if all the elements in a list are the same#
+#List#
+x = [0,0,0]
+y = sum(x)
+
+def all_equal():
+  if (y/len(x))==x[0]: 
+    print('True')
+  else:
+    print('False')
+exit
+
+all_equal()    
+     
