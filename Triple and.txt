@@ -1,0 +1,13 @@
+
+# Test if three items are identical #
+x=3
+y=3
+z=3
+def triple_and():
+    if x==y==z:
+        print('True')
+    else:
+        print('False')
+exit     
+
+triple_and()      
