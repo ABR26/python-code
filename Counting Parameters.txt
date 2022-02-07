@@ -1,0 +1,7 @@
+#The function should return the number of arguments it was called with.
+#the number of arguments it was called with. 
+x = []
+def param_count():
+    print(len(x)) 
+exit      
+param_count()
