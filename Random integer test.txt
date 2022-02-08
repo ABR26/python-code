@@ -1,0 +1,16 @@
+
+# Function generates a random number integer and determines if it is odd or even # 
+
+import random
+#Input high and low values here#
+
+def rand_odd_even():
+    
+    z = random.randint(1,100)
+    if z%2 == 0: 
+        print(int(z),"is even")
+    else:
+        print(int(z), "is odd")
+exit
+
+rand_odd_even()
