@@ -1,0 +1,8 @@
+
+# Calculating the diagonal differences of a 2d grid running left to right, 1-5-9 minus 3-5-7. 
+
+from random import randint
+
+x = [randint(0,20), randint(0,20), randint(0,20), randint(0,20), randint(0,20), randint(0,20), randint(0,20), randint(0,20), randint(0,20)]
+
+print((x[0]+x[2]+x[4])-(x[2]+x[4]+x[6]))
