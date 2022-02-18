@@ -1,0 +1,16 @@
+#converting random polar coordinates into cartesian and back.
+import random
+import math
+theta = (random.randrange(0, 90))
+theta = theta/57
+r = (random.randrange(0, 20))
+def Coord_convert():
+    print(theta,"Radians, ", r, "Unit(s)")
+    x = r*(math.sin(theta))
+    y = r*(math.cos(theta))
+    print("Cartesian Coordinates are", x, "Unit(s)" , " & ", y, "Unit(s)")
+    lamb = math.acos((1/r)*y)
+    
+    print(lamb, "Reversal test")
+    print(((x**2)+(y**2))**(0.5), "Reversal test")
+Coord_convert()
