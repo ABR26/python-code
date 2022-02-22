@@ -1,4 +1,4 @@
-# Reversing a Caeser shift, lower case, with +5 Encyrpt.
+# Reversing a Caesar shift, lower case, with +5 Encyrpt.
 # Online Python - IDE, Editor, Compiler, Interpreter
 Encyrpt = ["f","q","t","s","l","y","n","r","j"] 
 for bob in Encyrpt:
