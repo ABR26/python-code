@@ -1,0 +1,13 @@
+# Reversing a Caeser shift, lower case, with +5 Encyrpt.
+# Online Python - IDE, Editor, Compiler, Interpreter
+Encyrpt = ["f","q","t","s","l","y","n","r","j"] 
+for bob in Encyrpt:
+    if ord(bob)>=102 :
+     yob = ord(bob)
+     tob = int(yob) -5
+     dob = chr(tob)
+     print(dob)
+    elif ord(bob)<102 :
+        job = chr(ord(bob)+21)
+        print(job)
+        
