@@ -1,24 +1,73 @@
 
-# Grocery shopping purchase algorithm. #
-# Rage with the machine... #
+# Grocery shopping purchase algorithm. 
+# Rage with the machine... 
+#This algorithm:
+#1. takes a grocery item and price.
+#2. Evaluates if it is perishable or non perishable.
+#3. If non perishable and the item is below the normal price calculates and returns the excess amount to purchase.
+#4. If perishable and above normal price returns a do not purchase statement.
+#5. If non perishable and above the normal price returns a do not purchase statement.
+#6. If perishable and below the normal price returns a purchase statement.   
+
 import math
 
-x = "Bacon"
-priceX= 200
-P = ["Bacon","Cheese", "Milk"]
-NP = ["Oats", "Biscuits", "Tea"]
+print('Please type the name of the item')
+x = input()
+x = str(x)
+print('Please type the cost of the item in pence per kg')
+priceX = input()
+priceX = int(priceX)
+#List of items
+P = ["Eggs","Milk", "White potatoes", "Carrots", "Cherry Tomatoes", "Mushrooms", "Lemons"]
+NP = ["Oats", "Pasta", "Baked Beans", "Earl grey", "Orange Juice", "Plain Flour", "Extra Virgin Olive Oil", "Rice",
+"Tinned Tomatoes", "Sundried Tomatoes", "Salted Butter", "Dried Yeast", "Chicken Breast", "Marmite","Cheese", "Green Olives"]
+#Price look up 
 Pdict = {
-  "Bacon": 250,
-  "Cheese": 350,
-  "Milk": 120}
+  "Eggs": 120,
+  "Milk": 52,
+  "White potatoes": 67,
+  "Carrots": 40,
+  "Cherry tomatoes": 200,
+  "Mushrooms": 396,
+  "Lemons": 0,
+}
 NPdict = {
-  "Oats": 100,
-  "Biscuits": 350,
-  "Tea": 320}
+  "Oats": 75,
+  "Pasta": 140,
+  "Baked Beans": 100,
+  "Earl Grey": 100,
+  "Orange Juice": 81,
+  "Plain flour": 30,
+  "Chicken Breast": 579,
+  "Extra Virgin Olive Oil": 0,
+  "Rice": 0,
+  "Tinned Tomatoes": 141,
+  "Sundried Tomatoes": 614,
+  "Salted Butter": 592,
+  "Dried Yeast": 1551,
+  "Marmite": 0,
+  "Cheese": 442,
+  "Green Olives": 376,
+}
+#Price lookup comapared to normal expense 
 NPdict2 = {
   "Oats": 52,
-  "Biscuits": 7,
-  "Tea": 26}  
+  "Pasta": 52,
+  "Baked Beans": 208,
+  "Earl Grey": 78,
+  "Orange Juice": 12,
+  "Plain flour": 52,
+  "Chicken Breast": 4,
+  "Extra Virgin Olive Oil": 52,
+  "Rice": 104,
+  "Tinned Tomatoes": 208,
+  "Sundried Tomatoes": 12,
+  "Salted Butter": 52,
+  "Dried Yeast": 26,
+  "Marmite": 52,
+  "Cheese": 26,
+  "Green Olives": 52,
+} 
 
 if x in P and ((priceX-Pdict[x]) > 0 ) :
   print("Buy Substitute or Delay Purchase")
@@ -33,5 +82,3 @@ elif x in NP and (priceX-NPdict[x]) <= 0 :
     
 elif x in P and ((priceX-Pdict[x]) <= 0 ) :
   print("Buy item as usual ")   
-  
-    
