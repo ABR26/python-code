@@ -14,6 +14,6 @@ v = input()
 v = float(v)
 g = 9.81
 React = v*t
-Brake1 = v**2/2*u*g
+Brake1 = (v**2)/(2*u*g)
 Stopping = React + Brake1 
 print('Your stopping distance is', Stopping , 'Metres')
