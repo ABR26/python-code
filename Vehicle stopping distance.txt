@@ -1,0 +1,19 @@
+#Vehicle stopping distance.
+#To convert m/s into mph multiply by 2.235, to reverse divide by 2.235. 
+#v = Velocity m/s
+#t = Reaction time, s
+#u = Friction coefficient, u
+#g = Gravity, g 
+#Stopping distance = reaction + braking distance.
+t = 1.5
+t = float(t)
+u = 0.7
+u = float(u)
+print('Please type the speed of the vehicle')
+v = input()
+v = float(v)
+g = 9.81
+React = v*t
+Brake1 = v**2/2*u*g
+Stopping = React + Brake1 
+print('Your stopping distance is', Stopping , 'Metres')
