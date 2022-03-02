@@ -1,0 +1,305 @@
+#Tube/Metrolink Route Nottingham finding minimum using hub and spoke idea.
+#Key
+#Starting Network ie Phoenix Park = P, any network it passes through ie Hucknall West = HW, 
+#Terminating line ie Clifton, So the code is PHWC 
+
+HucknallWest = 21
+HucknallEast = 21
+#Hucknall North = HN
+#HucknallWest = HW
+#HucknallEast = HE
+#Toton = T
+#Clifton = C
+#Phoenix Park = P
+
+HuckNorth  = {"Hucknall":11,"Butlers Hill":8,"Moor Bridge":6,"Bulwell Forest":4,"Bulwell":2,"Highbury Vale":0}
+Tot = {"Toton":31,"Inham Road":29,"Eskdale Drive":27,"Bramcote Lane":25,"Cator Lane":23,"High Road":21,"Chilwell Road":20,"Beeston Centre":18,"Middle Street":16,"University Boulevard":14,"University Of Nottingham":10,"QMC":8,"Gregory Street":6.5,"NG2":4,"Meadows Way West":2.5,"Station":0}
+Clift = {"Clifton South":21,"Summerwood Lane":20,"Holy Trinity":19,"Clifton Centre":16,"Rivergreen":15,"Southchurch Drive North":13.5,"Ruddington Lane":11,"Compton Acres":10,"Wilford Lane":8,"Wilford Village":4,"Meadows Embankment":3,"Queens Walk":1.5,"Station":0}
+HuckEast  = {"Highbury Vale":21,"David Lane":19,"Basford":18, "Wilkinson Street":16,"Shipstone Street":14.5,"Beaconsfield Street":13,
+"Noel Street":11.5,"The Forest":10,"High School":8,"Nottingham Trent University":5.5,"Royal Centre": 4,"Old Market Square": 3, "Lace Market":1.5,
+"Station":0}
+HuckWest  = {"Highbury Vale":21,"David Lane":19,"Basford":18, "Wilkinson Street":16,"Radford Road":14,"Hyson Green Market":12,"The Forest":10,
+"High School":8,"Nottingham Trent University":5.5,"Royal Centre": 4,"Old Market Square": 3, "Lace Market":1.5, "Station":0}
+Pho = {"Phoenix Park":3,"Cinderhill":2,"Highbury Vale":0}
+
+print("Please type your route code(s) detailed above")
+x = input()
+#type the reference distance above
+x = str(x)
+print("Please type the stop you will be boarding the tram")
+q = input()
+#type the key of the starting location
+q = str(q)
+print("Please type the stop you will be leaving the tram")
+r = input()
+#type the key of the destination
+r = str(r)
+
+if x == 'PHN':
+    y = (Pho.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")
+    
+if x == 'HNP':
+    y = (HuckNorth.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")  
+    
+if x == 'PHW':
+    y = (Pho.get(q))
+    z = (HuckWest.get(r))
+    y = int(y)
+    z = int(z)
+    Route = ((3-y) + (21-z))
+    print("Your journey time will be", Route, "Minutes")   
+if x == 'HWP':
+    y = (HuckWest.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = ((21-y) + (z))
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'PHE':
+    y = (Pho.get(q))
+    z = (HuckEast.get(r))
+    y = int(y)
+    z = int(z)
+    Route = ((y) + (21-z))
+    print("Your journey time will be", Route, "Minutes")    
+if x == 'HEP':
+    y = (HuckEast.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = ((21 - y) + (z))
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'PHWT':
+    y = (Pho.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'THWP':
+    y = (Tot.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes")
+if x == 'PHWC':
+    y = (Pho.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'CHWP':
+    y = (Clift.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'PHEC':
+    y = (Pho.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'CHEP':
+    y = (Clift.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'PHET':
+    y = (Pho.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'THEP':
+    y = (Tot.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes")   
+if x == 'TC':
+    y = (Tot.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")     
+if x == 'CT':
+    y = (Clift.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")
+if x == 'THW':
+    y = (Tot.get(q))
+    z = (HuckWest.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'HWT':
+    y = (HuckWest.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")   
+if x == 'THE':
+    y = (Tot.get(q))
+    z = (HuckEast.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'HET':
+    y = (HuckEast.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'THWHN':
+    y = (Tot.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'HNHWT':
+    y = (HuckNorth.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes")    
+if x == 'THEHN':
+    y = (Tot.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'HNHET':
+    y = (HuckNorth.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'CHW':
+    y = (Clift.get(q))
+    z = (HuckWest.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")   
+if x == 'HWC':
+    y = (HuckWest.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")    
+if x == 'CHE':
+    y = (Clift.get(q))
+    z = (HuckEast.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'HEC':
+    y = (HuckEast.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y + z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'CHWHN':
+    y = (Clift.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")  
+if x == 'HNHWC':
+    y = (HuckNorth.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallWest + y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")
+if x == 'CHEHN':
+    y = (Clift.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")     
+if x == 'HNHEC':
+    y = (HuckNorth.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (HucknallEast + y + z)
+    print("Your journey time will be", Route, "Minutes change trams at Nottingham station est 3.5 minute wait")    
+if x == 'T':
+    y = (Tot.get(q))
+    z = (Tot.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes")  
+if x == 'HW':
+    y = (HuckWest.get(q))
+    z = (HuckWest.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'HE':
+    y = (HuckEast.get(q))
+    z = (HuckEast.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'HN':
+    y = (HuckNorth.get(q))
+    z = (HuckNorth.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes") 
+if x == 'C':
+    y = (Clift.get(q))
+    z = (Clift.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes")   
+if x == 'P':
+    y = (Pho.get(q))
+    z = (Pho.get(r))
+    y = int(y)
+    z = int(z)
+    Route = (y - z)
+    print("Your journey time will be", Route, "Minutes")  
