@@ -1,0 +1,47 @@
+# Monte Carlo Method.
+# Estimating Pi, three trials used.
+import random
+import math
+
+a = range(1,25000)
+d = 0
+e = 0
+h = 0
+o = 0
+p = 0
+q = 0
+f = random.randrange(1,314159)
+for i in a :
+    if f < 100001:
+         d+=1 
+         f = random.randrange(1,314159)
+         print("d is",d)
+         print(f)
+    if f >= 0:
+         e+=1 
+         f = random.randrange(1,314159)
+         print("e is",e)
+print("pi estimate from (a) samples" ,e/d) 
+for i in a :
+    if f < 100001:
+         h+=1 
+         f = random.randrange(1,314159)
+         print("h is",h)
+         print(f)
+    if f >= 0:
+         o+=1 
+         f = random.randrange(1,314159)
+         print("o is",o)
+print("pi estimate from (a) samples" ,h/o)
+for i in a :
+    if f < 100001:
+         p+=1 
+         f = random.randrange(1,314159)
+         print("p is",p)
+         print(f)
+    if f >= 0:
+         q+=1 
+         f = random.randrange(1,314159)
+         print("q is",q)
+print("pi estimate from (a) samples" ,q/p)
+print("The average of the three trials is", ((e/d)+(o/h)+(q/p))/3 )        
