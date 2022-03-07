@@ -1,0 +1,79 @@
+#Algorithm for using Gaussian naïve Bayes:
+#Deciding if an item is in category A or B based on inference.
+#Take two classicaly dimorphic traits as distributions, Height, & Waist to Hip ratio.
+#Calculate p.d.f values for each input based on assumed Gaussian distribution.
+#Evaluate the ratios of the two data point, giving a relative likelihood.
+# Is an individual a Man or Female based on their height and Waist hip ratio using population norms.
+import math
+#Height M 
+Sdev = 8
+#Indivduals Height
+x = 84.25
+u = 80
+#Height F
+Sdev2 = 8
+u2 = 63
+#Waist to Hip Ratio F 
+Sdev3 = 10
+#Indivduals W 2 H ratio
+q = 90
+q = float(q)
+u3 = 91
+u3 = float(u3)
+#Waist to Hip Ratio M 
+Sdev4 = 12
+u4 = 74
+u4= float(u4)
+
+def Gauss_pdf():
+    G1 = (6.2831)**0.5
+    G2 = G1*Sdev
+    G3 = 1/G2
+    G4 = -((x-u)**2)
+    G5 = 2*((Sdev**2))
+    G6 = G4/G5
+    G7 = 2.718281**G6
+    G8 = G3*G7 
+    #G1 = int(G1)
+    print('Male')
+    print(G8)
+    
+    AG1 = (6.2831)**0.5
+    AG2 = AG1*Sdev2
+    AG3 = 1/AG2
+    AG4 = -((x-u2)**2)
+    AG5 = 2*((Sdev2**2))
+    AG6 = AG4/AG5
+    AG7 = 2.718281**AG6
+    AG8 = AG3*AG7 
+    #G1 = int(G1)
+    print('Female')
+    print(AG8)
+    print('Based on their height this individual is',(G8)/(AG8),'times more likely to be a Man than a Woman')
+
+    h1 = (6.2831)**0.5
+    h2 = h1*Sdev3
+    h3 = 1/h2
+    h4 = -((q-u3)**2)
+    h5 = 2*((Sdev3**2))
+    h6 = h4/h5
+    h7 = 2.718281**h6
+    h8 = h3*h7 
+    #h1 = int(h1)
+    print('Male')
+    print(h8)
+    
+    k1 = (6.2831)**0.5
+    k2 = k1*Sdev4
+    k3 = 1/k2
+    k4 = -((q-u4)**2)
+    k5 = 2*((Sdev4**2))
+    k6 = k4/k5
+    k7 = 2.718281**k6
+    k8 = k3*k7 
+    #k1 = int(k1)
+    print('Female')
+    print(k8)
+    print('Based on their Waist to hip ratio this individual is',(h8)/(k8),'times more likely to be a Man than a Woman')
+    print('One average this individual is',((G8/AG8)+(h8/k8))/2,'times more likely to be a Man than a Woman ' )
+Gauss_pdf() 
