@@ -1,0 +1,20 @@
+#AirFightRoutePlanner
+#Part 1 of question
+Direct = {"London":"Paris","Paris":"London","London":"Dublin","Dublin":"London","Reykjavik":"London",
+"London":"Reykjavik","Lisbon":"London","London":"Lisbon","Amsterdam":"London","London":"Amsterdam",
+"Paris":"Madrid","Madrid":"Paris","Paris":"Rome","Rome":"Paris","Amsterdam":"Geneva","Geneva":"Amsterdam",
+"Paris":"Berlin","Berlin":"Paris","Berlin":"Athens","Athens":"Berlin","Berlin":"Bucharest","Bucharest":"Berlin","Madrid":"Rome","Rome":"Madrid",
+"Geneva":"Athens","Geneva":"Athens","Athens":"Geneva"}
+#Part 2 of question
+HubStart = {"Dublin":"London","Lisbon":"London","Paris":"London","London":"Paris",
+"Reykjavik":"London","Madrid":"Paris","Rome":"Paris","Amsterdam":"London",
+"Geneva":"Amsterdam and Athens","Oslo":"Amsterdam","Berlin":"Paris","Athens":"Amsterdam and Geneva",
+"Bucharest":"Berlin","Budapest":"Paris"}
+print("Please input your origin airport")
+Origin = input()
+print("Please input your destination airport")
+Destination = input()
+if (Destination==Direct.get(Origin)) or (Origin==Direct.get(Destination)):
+    print("Their is a direct flight between",Origin,"&",Destination)
+else:
+    print("your flight will go from", Origin,"to",Destination,"Via",HubStart.get(Origin),"and",HubStart.get(Destination)) 
