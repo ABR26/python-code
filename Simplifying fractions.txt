@@ -1,0 +1,32 @@
+#Simplifying fractions.. 
+print("Please type the Numerator")
+Numerator = input()
+Numerator = int(Numerator)
+print("Please type the Denominator")
+Denominator = input()
+Denominator = int(Denominator)
+if Numerator%2==0 and Denominator%2==0:
+    while (Numerator%2==0) and (Denominator%2==0):
+        Numerator = Numerator/2
+        Denominator = Denominator/2
+        print(Numerator,"/",Denominator)
+if Numerator%3==0 and Denominator%3==0:
+    while (Numerator%3==0) and (Denominator%3==0):
+        Numerator = Numerator/3
+        Denominator = Denominator/3
+        print(Numerator,"/",Denominator)
+if Numerator%5==0 and Denominator%5==0:
+    while (Numerator%5==0) and (Denominator%5==0):
+        Numerator = Numerator/5
+        Denominator = Denominator/5
+        print(Numerator,"/",Denominator)  
+if Numerator%6==0 and Denominator%6==0:
+    while (Numerator%6==0) and (Denominator%6==0):
+        Numerator = Numerator/6
+        Denominator = Denominator/6
+        print(Numerator,"/",Denominator)   
+if Numerator%7==0 and Denominator%7==0:
+    while (Numerator%7==0) and (Denominator%7==0):
+        Numerator = Numerator/7
+        Denominator = Denominator/7
+        print(Numerator,"/",Denominator)    
