@@ -1,0 +1,31 @@
+#Calculates the distance between two points on a great circle route
+import math
+Latitude = {"LE1":52.63,"NG1":52.95,"IN1":57.477,"MK1":52,"RICH":51.4}
+Long = {"LE1":-1.13,"NG1":-1.15,"IN1":-4.36,"MK1":-0.759,"RICH":-0.255}
+print("Type Lat")
+Lat1 = input()
+Lat2 = input()
+print("Type Long")
+Long1 = input()
+Long2 = input()
+z = Latitude.get(Lat1)/57.3
+z = math.cos(z)
+a = Latitude.get(Lat2)/57.3
+a = math.cos(a)
+y = Long.get(Long2)- Long.get(Long1) 
+y = y/57.3
+y = math.cos(y)
+y = (1-y)/2
+y = z*a*y
+print(y)
+x = Latitude.get(Lat1)- Latitude.get(Lat2)
+x = x/57.3 
+x = math.cos(x)
+x = (1-x)/2
+print(x)
+Hav_theta= x + y
+Hav_theta= (Hav_theta)**0.5 
+Hav_theta= math.asin(Hav_theta)
+Hav_theta= 12700*Hav_theta
+Hav_theta = int(Hav_theta)
+print("The great circle distance between",Lat1,"and",Lat2,"is",Hav_theta,"KM or",Hav_theta*0.609,"Miles")
