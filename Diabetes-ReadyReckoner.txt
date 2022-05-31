@@ -1,0 +1,26 @@
+#Ready reckoner for exposure to diabetes.
+#Diabetes risk correlates closely with BMI/Blood Sugar & Age.
+
+print("Please enter your Age")
+Age = input()
+Age = int(Age)
+print("Please enter your Height")
+Height = input()
+Height = float(Height)
+print("Please enter your Weight")
+Weight = input()
+Weight = float(Weight)
+BMI = Weight/(Height**2)
+print("Please enter your HbA1c (blood sugar level)")
+HbA1c = input()
+HbA1c = int(HbA1c)
+Factor = (Age/42)*(BMI/25)*(HbA1c/48)
+print("Your risk factor for Diabetes with a norm of 1.0 is", Factor,"x normal" )
+if (Factor >= 0 and Factor < 1):
+    print("You are below average risk")
+if (Factor >= 1 and Factor < 1.5):
+    print("You are average risk")
+if Factor >= 1.5:
+    print("You are above average risk")
+if Factor >= 2:
+    print("You are high risk")
