@@ -1,0 +1,49 @@
+#Option 1: Book a seat by row/column
+#Option 2: Book a seat close to the front
+#Option 3: Book a seat close to the back
+A = [1,1,0,0,1,0,0,0]
+B = [0,1,1,0,1,0,1,0]
+C = [0,0,1,1,0,1,0,0]
+print("Would you like a seat at the front")
+Front = input()
+print("Would you like a seat at the back")
+Back = input()
+if Front == "Yes":
+    print("Seat", int(A.index(0))+1, "Row A is available")
+if Back == "Yes":
+    print("Seat", int(C.index(0))+1, "Row C is available")
+print("Which row number would you like?")    
+Row = input()
+if Row=="A":
+    print("Which seat number")
+    Seat = input()
+    Seat = int(Seat)
+    Seat = Seat-1
+    if A[Seat]==0:
+        print("this seat is free")
+        A.insert(Seat, 1)
+        print("Row A is now", A, "You have selected seat", Seat+1, "Row",Row)   
+    else:
+        print("this seat is occupied")
+if Row=="B":
+    print("Which seat number")
+    Seat = input()
+    Seat = int(Seat)
+    Seat = Seat-1
+    if B[Seat]==0:
+        print("this seat is free")
+        B.insert(Seat, 1)
+        print("Row B is now", B, "You have selected seat", Seat+1, "Row",Row)   
+    else:
+        print("this seat is occupied")    
+if Row=="C":
+    print("Which seat number")
+    Seat = input()
+    Seat = int(Seat)
+    Seat = Seat-1
+    if C[Seat]==0:
+        print("this seat is free")
+        C.insert(Seat, 1)
+        print("Row C is now", C, "You have selected seat", Seat+1, "Row",Row)   
+    else:
+        print("this seat is occupied") 
