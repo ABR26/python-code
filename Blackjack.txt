@@ -1,0 +1,88 @@
+# Blackjack
+print("Welcome to the casino you may notice the lack of clocks")
+Scoring = [1,2,3,4,5,6,7,8,9,10,10,10]
+Suit = ["Clubs","Hearts","Diamonds","Spades"]
+import random
+Playercard1 = random.choice(Scoring) 
+print("Playercard1 is:", Playercard1, "of",random.choice(Suit))
+Playercard2 = random.choice(Scoring)
+print("Playercard1 is:", Playercard2, "of",random.choice(Suit))
+Dealercard1 = random.choice(Scoring) 
+print("Dealercard1 is:", Dealercard1, "of",random.choice(Suit))
+Dealercard2 = random.choice(Scoring)
+print("Dealercard2 is:", Dealercard2, "of",random.choice(Suit))
+Playerscore = Playercard1+Playercard2
+print("Playerscore is", Playerscore)
+Dealerscore = Dealercard1+Dealercard2
+print("Dealerscore is", Dealerscore)
+while (Dealerscore<=21) and (Playerscore<=21):
+    print("Would you like to Hit or Stick?")
+    Choice = input()
+    if Choice=="Hit":
+        Playercard3 = random.choice(Scoring)
+        Playerscore = Playerscore+Playercard3
+        print("Playerscore is:",Playerscore)
+        if Playerscore>21:
+            print("you Busted!! Dealer wins")
+        while Playerscore<=21 and Dealerscore<17:
+            print("Would you like to Hit or Stick?")
+            Choice = input()
+            if Choice=="Hit":
+                Playercard3 = random.choice(Scoring)
+                Playerscore = Playerscore+Playercard3
+                print("Playerscore is:",Playerscore)
+                if Playerscore>21:
+                    print("you Busted!! Dealer wins")
+            if Choice=="Stick":
+                Dealerscore3 = random.choice(Scoring)
+                Dealerscore = Dealerscore+Dealerscore3
+                print("Dealerscore is:",Dealerscore)
+                if Playerscore>Dealerscore and Playerscore<21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore<Dealerscore and Dealerscore<21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore) 
+                if Playerscore>21 and Dealerscore<=21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)  
+                if Playerscore<=21 and Dealerscore>21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)      
+        while Playerscore<=21 and 17>=Dealerscore<=21:
+            print("Would you like to Hit or Stick?")        
+            if Choice=="Hit":
+                Playercard3 = random.choice(Scoring)
+                Playerscore = Playerscore+Playercard3
+                print("Playerscore is:",Playerscore)
+                Dealerscore3 = random.choice(Scoring)
+                Dealerscore = Dealerscore+Dealerscore3
+                print("Dealerscore is:",Dealerscore)
+                if Playerscore>Dealerscore and Playerscore<21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore<Dealerscore and Dealerscore<21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore>21 and Dealerscore<=21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)  
+                if Playerscore<=21 and Dealerscore>21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)      
+            if Choice=="Stick":
+                Dealerscore3 = random.choice(Scoring)
+                Dealerscore = Dealerscore+Dealerscore3
+                print("Dealerscore is:",Dealerscore)
+                if Playerscore>Dealerscore and Playerscore<21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore<Dealerscore and Dealerscore<21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore>21 and Dealerscore<=21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)  
+                if Playerscore<=21 and Dealerscore>21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)    
+    if Choice=="Stick":
+                Dealerscore3 = random.choice(Scoring)
+                Dealerscore = Dealerscore+Dealerscore3
+                print("Dealerscore is:",Dealerscore)
+                if Playerscore>Dealerscore and Playerscore<21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)
+                if Playerscore<Dealerscore and Dealerscore<21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)   
+                if Playerscore>21 and Dealerscore<=21:
+                    print("you lose!! You",Playerscore, "Dealer", Dealerscore)  
+                if Playerscore<=21 and Dealerscore>21:
+                    print("you win!! You",Playerscore, "Dealer", Dealerscore)      
