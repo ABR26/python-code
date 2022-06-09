@@ -1,0 +1,15 @@
+#Sneaky Sorting Algorithm = Max Sort.
+#Aim is to rank items in Ascending order by passing them highest first into a new list.
+List = [3,4,2,1]
+List2 = []
+def sort():
+    while len(List2)<4:    
+        i=0
+        Max = max(List)
+        print(Max)
+        List2.insert(0,Max)
+        List.remove(Max)
+        print("List one is now",List)
+        print("List two is now",List2)
+        i+=1
+sort()
