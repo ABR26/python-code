@@ -1,0 +1,198 @@
+#Dart scoring challenge
+#Step 1. Generate the coordinates of a single dart at random, 
+#a. is a  length between 0-1 b. is an angle between 0 and 360.
+#work out the scoring based on how this relates to a darts scoreboard.
+#output the scoring over a single leg for two players.
+import random
+Score1B = random.randrange(0,100,1)
+Score1A = random.randrange(1,360,1)
+print("Score1 is", Score1A,"Degrees and",Score1B,"Distance")
+if Score1B<3:
+    Scoreboard = 50
+    print("Bullseye!!You scored",Scoreboard )
+if 3<=Score1B<6:
+    Scoreboard = 25
+    print("You scored",Scoreboard )    
+if 48<Score1B<52:
+    if 351<=Score1A<360 or 0<=Score1A<8:
+        Scoreboard = 60
+        print("You scored",Scoreboard )
+    if 9<=Score1A<27:
+        Scoreboard = 3
+        print("You scored",Scoreboard )
+    if 27<=Score1A<45:
+        Scoreboard = 54
+        print("You scored",Scoreboard )
+    if 45<=Score1A<63:
+        Scoreboard = 12
+        print("You scored",Scoreboard )   
+    if 63<=Score1A<81:
+        Scoreboard = 39
+        print("You scored",Scoreboard ) 
+    if 81<=Score1A<98:
+        Scoreboard = 18
+        print("You scored",Scoreboard )   
+    if 98<=Score1A<116:
+        Scoreboard = 30
+        print("You scored",Scoreboard )    
+    if 116<=Score1A<134:
+        Scoreboard = 45
+        print("You scored",Scoreboard ) 
+    if 134<=Score1A<152:
+        Scoreboard = 6
+        print("You scored",Scoreboard )    
+    if 152<=Score1A<170:
+        Scoreboard = 51
+        print("You scored",Scoreboard )
+    if 170<=Score1A<188:
+        Scoreboard = 9
+        print("You scored",Scoreboard ) 
+    if 188<=Score1A<206:
+        Scoreboard = 57
+        print("You scored",Scoreboard )  
+    if 206<=Score1A<224:
+        Scoreboard = 21
+        print("You scored",Scoreboard )
+    if 224<=Score1A<242:
+        Scoreboard = 48
+        print("You scored",Scoreboard )    
+    if 242<=Score1A<260:
+        Scoreboard = 24
+        print("You scored",Scoreboard )   
+    if 260<=Score1A<278:
+        Scoreboard = 33
+        print("You scored",Scoreboard )  
+    if 278<=Score1A<296:
+        Scoreboard = 42
+        print("You scored",Scoreboard ) 
+    if 296<=Score1A<314:
+        Scoreboard = 27
+        print("You scored",Scoreboard ) 
+    if 314<=Score1A<332:
+        Scoreboard = 36
+        print("You scored",Scoreboard )   
+    if 332<=Score1A<351:
+        Scoreboard = 15
+        print("You scored",Scoreboard ) 
+if 96<Score1B<101:
+    if 351<=Score1A<360 or 0<=Score1A<8:
+        Scoreboard = 40
+        print("You scored",Scoreboard )
+    if 9<=Score1A<27:
+        Scoreboard = 2
+        print("You scored",Scoreboard )
+    if 27<=Score1A<45:
+        Scoreboard = 36
+        print("You scored",Scoreboard )
+    if 45<=Score1A<63:
+        Scoreboard = 8
+        print("You scored",Scoreboard )   
+    if 63<=Score1A<81:
+        Scoreboard = 26
+        print("You scored",Scoreboard ) 
+    if 81<=Score1A<98:
+        Scoreboard = 12
+        print("You scored",Scoreboard )   
+    if 98<=Score1A<116:
+        Scoreboard = 20
+        print("You scored",Scoreboard )    
+    if 116<=Score1A<134:
+        Scoreboard = 30
+        print("You scored",Scoreboard ) 
+    if 134<=Score1A<152:
+        Scoreboard = 4
+        print("You scored",Scoreboard )    
+    if 152<=Score1A<170:
+        Scoreboard = 34 
+        print("You scored",Scoreboard )
+    if 170<=Score1A<188:
+        Scoreboard = 6
+        print("You scored",Scoreboard ) 
+    if 188<=Score1A<206:
+        Scoreboard = 38
+        print("You scored",Scoreboard )  
+    if 206<=Score1A<224:
+        Scoreboard = 14
+        print("You scored",Scoreboard )
+    if 224<=Score1A<242:
+        Scoreboard = 32
+        print("You scored",Scoreboard )    
+    if 242<=Score1A<260:
+        Scoreboard = 16
+        print("You scored",Scoreboard )   
+    if 260<=Score1A<278:
+        Scoreboard = 22
+        print("You scored",Scoreboard )  
+    if 278<=Score1A<296:
+        Scoreboard = 28
+        print("You scored",Scoreboard ) 
+    if 296<=Score1A<314:
+        Scoreboard = 18
+        print("You scored",Scoreboard ) 
+    if 314<=Score1A<332:
+        Scoreboard = 24
+        print("You scored",Scoreboard )   
+    if 332<=Score1A<351:
+        Scoreboard = 10
+        print("You scored",Scoreboard )     
+if 6<=Score1B<=48 or 52<=Score1B<=96 :  
+    if 351<=Score1A<360 or 0<=Score1A<8 :
+        Scoreboard = 20
+        print("You scored",Scoreboard )
+    if 9<=Score1A<27:
+        Scoreboard = 1
+        print("You scored",Scoreboard )
+    if 27<=Score1A<45:
+        Scoreboard = 18
+        print("You scored",Scoreboard )
+    if 45<=Score1A<63:
+        Scoreboard = 4
+        print("You scored",Scoreboard )   
+    if 63<=Score1A<81:
+        Scoreboard = 13
+        print("You scored",Scoreboard ) 
+    if 81<=Score1A<98:
+        Scoreboard = 6
+        print("You scored",Scoreboard )   
+    if 98<=Score1A<116:
+        Scoreboard = 10
+        print("You scored",Scoreboard )    
+    if 116<=Score1A<134:
+        Scoreboard = 15
+        print("You scored",Scoreboard ) 
+    if 134<=Score1A<152:
+        Scoreboard = 2
+        print("You scored",Scoreboard )    
+    if 152<=Score1A<170:
+        Scoreboard = 17
+        print("You scored",Scoreboard )
+    if 170<=Score1A<188:
+        Scoreboard = 3
+        print("You scored",Scoreboard ) 
+    if 188<=Score1A<206:
+        Scoreboard = 19
+        print("You scored",Scoreboard )  
+    if 206<=Score1A<224:
+        Scoreboard = 7
+        print("You scored",Scoreboard )
+    if 224<=Score1A<242:
+        Scoreboard = 16
+        print("You scored",Scoreboard )    
+    if 242<=Score1A<260:
+        Scoreboard = 4
+        print("You scored",Scoreboard )   
+    if 260<=Score1A<278:
+        Scoreboard = 11 
+        print("You scored",Scoreboard )  
+    if 278<=Score1A<296:
+        Scoreboard = 14 
+        print("You scored",Scoreboard ) 
+    if 296<=Score1A<314:
+        Scoreboard = 9 
+        print("You scored",Scoreboard ) 
+    if 314<=Score1A<332:
+        Scoreboard = 12 
+        print("You scored",Scoreboard )   
+    if 332<=Score1A<351:
+        Scoreboard = 5 
+        print("You scored",Scoreboard )  
