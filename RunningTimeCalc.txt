@@ -1,0 +1,27 @@
+#Estimating marathon time from mile running time based on the Horwill/Coe 4 second pace equivalence rule.
+print("Please enter the race distance you want to predict in metres")
+Estimate = input()
+Estimate = float(Estimate)
+print("Please enter the race distance you have run in metres")
+Completed = input()
+Completed = float(Completed)
+print("Please enter the time of your completed race in seconds")
+Time = input()
+Time = float(Time)
+DistRatio = Estimate/Completed
+LapTime = (Time/Completed)*400
+print(LapTime)
+LapDifference = ((DistRatio)**0.5)*4
+print("LapDifference",LapDifference)
+EstimatedLap = LapDifference + LapTime
+print("Est lap",EstimatedLap)
+EstimatedTotLaps = Estimate/400
+print("EstTotlaps",EstimatedTotLaps)
+PredictedTimeA = (int((EstimatedLap*EstimatedTotLaps)/3600))
+PredictedTimeB = float(EstimatedLap*EstimatedTotLaps)/3600
+PredictedTimeB = PredictedTimeB-2
+PredictedTimeB = PredictedTimeB*60
+if PredictedTimeA>1:
+    print(PredictedTimeA,"Hours",PredictedTimeB,"Minutes")
+if PredictedTimeA<1:
+    print((EstimatedTotLaps*EstimatedLap)/60,"Minutes")
