@@ -1,0 +1,28 @@
+#Brackets Validator in an equation.
+Bracket = "((3*5))+4)"
+Count = 0 
+Count1 = 0 
+Mis = (len(Bracket)/2)+1
+Mis = int(Mis)
+if ")" in Bracket[:Mis]:
+    print("Bracket misaligned")
+if "(" in Bracket[Mis:]:
+    print("Bracket misaligned")
+while "(" in Bracket:
+    x = Bracket.find("(")
+    print(x)
+    Count+=1
+    print("Count:",Count)
+    Bracket = Bracket[0:x]+Bracket[(x+1):]
+    print(Bracket)
+while ")" in Bracket:
+    y = Bracket.find(")")
+    print(y)
+    Count1+=1
+    print("Count1:",Count1)
+    Bracket = Bracket[-3:y]+Bracket[(y+1):]
+    print(Bracket)
+if Count==Count1:
+    print("Equal number of brackets",Count)
+if Count!=Count1:
+    print("Brackets not equal", Count1,",", Count)
