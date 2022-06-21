@@ -1,0 +1,17 @@
+# A simple recursive Algorithm odd or even#
+n=117
+n = int(n)
+def Divisible(n):
+    while n%2==0:
+        if n==2:
+            print("Even")
+        n=(n/2) 
+        print(n)
+        Divisible(n)
+        break
+    if n%2!=0 and n>2:
+        print("Odd") 
+    if n%2==0 and n==2:
+        print("Even") 
+    
+Divisible(n)     
