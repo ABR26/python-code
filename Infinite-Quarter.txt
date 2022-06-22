@@ -1,0 +1,12 @@
+#Infinite Quarter, adding granular fractions to 1/3.
+Whole = 100
+n = 4
+Quarter = Whole/n
+Quarter = float(Quarter)
+Fraction = Quarter/(n)
+Fraction = float(Fraction)
+for i in range(100):
+    Ratio = (Quarter+Fraction)/Whole
+    n = n*4
+    Fraction = Fraction+(Quarter/n)
+    print("Fraction of whole is now",Ratio*100,"%")
