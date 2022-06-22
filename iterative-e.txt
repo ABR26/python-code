@@ -1,0 +1,9 @@
+# Iterative e..estimating e using factorial iteration.
+import math
+n = 2
+e = 2 
+for i in range(16):
+    eL = 1/(math.factorial(n))
+    e = e + eL
+    n+=1
+    print(e)
