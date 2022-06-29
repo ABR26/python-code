@@ -1,0 +1,32 @@
+#Relative date calculator
+import time
+Origin = '00.00.01.01.1970'
+print("please input the present date format mm.hh.dd.mm.yyyy")
+Date = '13.15.29.06.2022'
+Date = str(Date)
+Originminute = int(Origin[0:2])
+Originhour = int(Origin[3:5])
+Originseconds = (int(Origin[6:8]))*86400
+OriginDay = (int(Origin[9:11]))*2630016
+OriginYear = (int(Origin[12:16]))*31557600
+OriginTotal = Originseconds+OriginDay+OriginYear
+print("Total Seconds of origin date from birth of christ",OriginTotal)
+Dateminute = int(Date[0:2])
+Datehour = int(Date[3:5])
+Dateseconds = (int(Date[6:8]))*86400
+DateDays = (int(Date[9:11]))*2630016
+DateYear = (int(Date[12:16]))*31557600
+DateTotal = Dateseconds+DateDays+DateYear
+print(DateYear)
+print("Total Seconds of Present date from birth of christ",DateTotal)
+DifferenceTotal = (DateTotal-OriginTotal)
+print("Seconds elapsed between origin date and present date is :", DifferenceTotal)
+DiffYear = DifferenceTotal/31556736
+print("Total years", DiffYear)
+DiffMonth = (DifferenceTotal%31556736)/2629728
+print("Month", DiffMonth)
+DiffDays = (DiffMonth - int(DiffMonth))*30.4
+DiffDays = int(DiffDays)
+DiffMonth = int(DiffMonth)
+DiffYear = int(DiffYear)
+print(DiffDays, "Days:", DiffMonth, "Months:",DiffYear,"Years:")
