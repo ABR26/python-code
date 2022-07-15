@@ -1,0 +1,96 @@
+#Simulated mastermind game, Computer randomly generates four counter, user gets three rounds of guesses.
+import random
+Computer = []
+Player = []
+Range = ["Red", "Green", "Yellow", "Blue"]
+for i in range(4):
+    Digit = random.choice(Range)
+    Computer.insert(0,Digit)
+    i+=1
+# Player first choice    
+print("please choose a first colour and position")
+Colour1 = input()
+Player.insert(3,Colour1)
+print("please choose a second colour and position")
+Colour2 = input()
+Player.insert(3,Colour2)
+print("please choose a third colour and position")
+Colour3 = input()
+Player.insert(3,Colour3)
+print("please choose a fourth colour and position")
+Colour4 = input()
+Player.insert(3,Colour4)
+print(Player)
+if Player[0]==Computer[0]:
+    print("The first key is correct in both colour and location")
+    if Player[0] in Computer and Player[0]!=Computer[0] :
+        print("The first key is correct in colour but not location")
+if Player[1]==Computer[1]:
+    print("The second key is correct in both colour and location")
+    if Player[1] in Computer and Player[1]!=Computer[1] :
+        print("The second key is correct in colour but not location")  
+if Player[2]==Computer[2]:
+    print("The third key is correct in both colour and location")
+    if Player[2] in Computer and Player[2]!=Computer[2] :
+        print("The third key is correct in colour but not location") 
+if Player[3]==Computer[3]:
+    print("The fourth key is correct in both colour and location")
+    if Player[3] in Computer and Player[3]!=Computer[3] :
+        print("The fourth key is correct in colour but not location")  
+# Player second choice         
+print("please choose a first colour and position")
+Colour1 = input()
+Player.pop(0)
+Player.insert(0,Colour1)
+print("please choose a second colour and position")
+Colour2 = input()
+Player.pop(1)
+Player.insert(1,Colour2)
+print("please choose a third colour and position")
+Colour3 = input()
+Player.pop(2)
+Player.insert(2,Colour3)
+print("please choose a fourth colour and position")
+Colour4 = input()
+Player.pop(3)
+Player.insert(3,Colour4)
+print(Player)
+if Player[0]==Computer[0]:
+    print("The first key is correct in both colour and location")
+    if Player[0] in Computer and Player[0]!=Computer[0] :
+        print("The first key is correct in colour but not location")
+if Player[1]==Computer[1]:
+    print("The second key is correct in both colour and location")
+    if Player[1] in Computer and Player[1]!=Computer[1] :
+        print("The second key is correct in colour but not location")  
+if Player[2]==Computer[2]:
+    print("The third key is correct in both colour and location")
+    if Player[2] in Computer and Player[2]!=Computer[2] :
+        print("The third key is correct in colour but not location") 
+if Player[3]==Computer[3]:
+    print("The fourth key is correct in both colour and location")
+    if Player[3] in Computer and Player[3]!=Computer[3] :
+        print("The fourth key is correct in colour but not location") 
+# Player third choice         
+print("please choose a first colour and position")
+Colour1 = input()
+Player.pop(0)
+Player.insert(0,Colour1)
+print("please choose a second colour and position")
+Colour2 = input()
+Player.pop(1)
+Player.insert(1,Colour2)
+print("please choose a third colour and position")
+Colour3 = input()
+Player.pop(2)
+Player.insert(2,Colour3)
+print("please choose a fourth colour and position")
+Colour4 = input()
+Player.pop(3)
+Player.insert(3,Colour4)
+print(Player)        
+if Player==Computer:
+    print("Well done you have cracked it!")
+    print("The computers choice was", Computer) 
+elif Player!=Computer:
+    print("You didnt get it this time the computer chose", Computer)  
