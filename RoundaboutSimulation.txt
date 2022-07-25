@@ -1,0 +1,49 @@
+#Roundabout simulation, three entrance roundabout, looking at traffic capacity, 180 trials.
+import random
+Road1 = 0
+Road1 = int(Road1)
+Road1Count = ["Null"]
+Road2 = 0
+Road2 = int(Road2)
+Road2Count = ["Null"]
+Road3 = 0
+Road3 = int(Road3)
+count = 0
+blockageCount = 0
+Road3Count = ["Null"]
+while count < 180:
+    if Road1!=0 and Road2!=0 and Road3!=0:
+        while Road1>=1:
+            Road1=Road1-1
+    if Road3==0 and Road1>=1:
+        Road1=Road1-1
+    if Road2==0 and Road3>=1:
+        Road3=Road3-1
+    if Road1==0 and Road2>=1:
+        Road2=Road2-1
+    if Road1!=0 and Road2!=0 and Road3!=0:
+        Road1=Road1-1
+    count+=1
+    x = random.randrange(0,2)
+    Road1= Road1 + x
+    #x = random.randrange(0,4)
+    print("Road1 has",Road1, "Cars waiting")
+    x = random.randrange(0,2)
+    Road3= Road3 + x
+    #x = random.randrange(0,4)
+    print("Road3 has",Road3, "Cars waiting")
+    x = random.randrange(0,2)
+    Road2= Road2 + x
+    print("Road2 has",Road2, "Cars waiting")
+    #x = random.randrange(0,4)
+    if count==20 or count==40 or count==60 or count==80 or count==100 or count==120 or count==140 or count==160 or count==180:
+        Road1Count.insert(0,Road1)
+        print("Road1Count is :",Road1Count)
+        Road2Count.insert(0,Road2)
+        print("Road2Count is :",Road2Count)
+        Road3Count.insert(0,Road3)
+        print("Road3Count is :",Road3Count)
+    if (Road3 and Road2 and Road1)>=2:
+        print("Junction is blocked")
+        blockageCount+=1
+    print("blockageCount :",blockageCount, "from", count, "trials" )    
