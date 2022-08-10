@@ -1,0 +1,14 @@
+# Checking a string for duplicate values
+x = "hhffmmyyrrssttuu"
+def Duplicate():
+    b = len(x)-1
+    count=0
+    a=-1
+    while a < b:
+        a+=1
+        if x[a] in x[(a+1):]:
+            print(x[a],"is a duplicate")
+            count+=1
+            print("Count", count)
+    print("Total of",  count, "duplicates")
+Duplicate()
