@@ -1,0 +1,17 @@
+# Escape velocity, v = ((2*g*m)/d)**0.5
+MassTable = {"Earth": 1, "Mercury": 0.05, "Venus": 0.815, "Mars": 0.107, "Jupiter": 318, "Saturn": 95.1, "Uranus": 14.5, "Neptune": 17.2 }
+RadiusTable = {"Earth": 1, "Mercury": 0.383, "Venus": 0.95, "Mars": 0.532, "Jupiter": 11.2, "Saturn": 9.41,"Uranus": 4.06, "Neptune": 3.88}
+g = 6.67*(10**(-11))
+EarthMass = 6*(10**24)
+EarthRadius = 6378000
+print(g)
+print(EarthMass)
+print("Please choose a planet")
+Planet = input()
+Mass = MassTable.get(Planet)
+Mass = Mass*EarthMass
+Radius = RadiusTable.get(Planet)
+Radius = Radius*EarthRadius
+print("Mass of",Planet, Mass,"KG","Radius of",Planet, Radius,"Metres")
+EscapeVelocity = ((2*g*Mass)/Radius)**0.5
+print("Escape Velocity from",Planet, EscapeVelocity, "Metres per second")
