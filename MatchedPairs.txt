@@ -1,0 +1,41 @@
+#Highest Pair. Checks the string for matching cards then return the highest pair if any.
+# Link to challenge at: https://edabit.com/challenge/Joj2RJJ4WyxRmkfxv
+Hand = "Q75QK37"
+HandValue = {"K":10,"Q":10, "J":10,"10":10,"9":9, "8":8, "7":7,"6":6, "5":5, "4":4, "3":3,"2":2,"ACE":1}
+List1 = Hand[1:]
+List2 = Hand[0]+Hand[2:]
+List3 = Hand[0:2]+Hand[3:]
+List4 = Hand[0:3]+Hand[4:]
+List5 = Hand[0:4]+Hand[5:]
+List6 = Hand[0:5]+Hand[6]
+List7 = Hand[0:6]
+Pairs = []
+if Hand[0] in List1:
+    print("Match pair for", Hand[0])
+    print("Value for match pair is",2*(HandValue.get(Hand[0])))
+    Pairs = Hand[0]
+if Hand[1] in List2:
+    print("Match pair for", Hand[1]) 
+    print("Value for match pair is",2*(HandValue.get(Hand[1])))
+    Pairs = Pairs + Hand[1]
+if Hand[2] in List3:
+    print("Match pair for", Hand[2])
+    print("Value for match pair is",2*(HandValue.get(Hand[2])))
+    Pairs = Pairs + Hand[2]
+if Hand[3] in List4:
+    print("Match pair for", Hand[3]) 
+    print("Value for match pair is",2*(HandValue.get(Hand[3])))
+    Pairs = Pairs + Hand[3]
+if Hand[4] in List5:
+    print("Match pair for", Hand[4])
+    print("Value for match pair is",2*(HandValue.get(Hand[4])))
+    Pairs = Pairs + Hand[4]
+if Hand[5] in List6:
+    print("Match pair for", Hand[5])
+    print("Value for match pair is",2*(HandValue.get(Hand[5])))
+    Pairs = Pairs + Hand[5]
+if Hand[6] in List7:
+    print("Match pair for", Hand[6])  
+    print("Value for match pair is",2*(HandValue.get(Hand[6])))
+    Pairs = Pairs + Hand[6]
+   
