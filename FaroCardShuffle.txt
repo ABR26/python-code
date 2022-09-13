@@ -1,0 +1,31 @@
+# Faro Shuffle, arriving back at original order after 3 shuffles. 
+CardDeck = [1, 2, 3, 4, 5, 6, 7, 8]
+CardShuffle = []
+a = 7
+b = 3
+while a>=4 and b>=0:
+    CardShuffle.insert(0, CardDeck[a])
+    a-=1
+    CardShuffle.insert(0, CardDeck[b])
+    b-=1
+    print(CardShuffle)
+CardDeck = CardShuffle
+CardShuffle2 = []
+a = 7
+b = 3
+while a>=4 and b>=0:
+    CardShuffle2.insert(0, CardDeck[a])
+    a-=1
+    CardShuffle2.insert(0, CardDeck[b])
+    b-=1
+    print(CardShuffle2)
+CardDeck = CardShuffle2
+CardShuffle3 = []
+a = 7
+b = 3
+while a>=4 and b>=0:
+    CardShuffle3.insert(0, CardDeck[a])
+    a-=1
+    CardShuffle3.insert(0, CardDeck[b])
+    b-=1
+    print(CardShuffle3)    
