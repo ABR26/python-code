@@ -1,0 +1,16 @@
+#Returns the Index and value of the largest even number in a list.
+
+r = [97, 19, 36, -18, -78, 24, 106]
+r2 = []
+a = 0
+for i in r:
+    while a<=6:
+        if (r[a]%2)!=1:
+            print("even index 2")
+            print(r[a])
+            r2.insert(0, r[a])
+            print("r2 is now",r2)
+            print(max(r2))
+            print("Index of largest even number is:",r.index(max(r2)), "Largest even number is:", max(r2))
+        a+=1
+   
