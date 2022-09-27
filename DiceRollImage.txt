@@ -1,0 +1,25 @@
+# Roll the dice, gives a visual output for an random integer input for two die.
+import random
+DiceRoll = random.randrange(1,7)
+DiceRoll = int(DiceRoll)
+DiceRoll2 = random.randrange(1,7)
+DiceRoll2 = int(DiceRoll2)
+# Generates a random integer between 0 and 6
+print("Randomly generated value is", DiceRoll)
+print("Randomly generated value two is", DiceRoll2)
+DiceOutPut = []
+DiceOutPut2 = []
+# Creates an empty list for the output image
+# While loop to feed the dots into the new list
+while DiceRoll>0:
+    DiceOutPut.insert(0, "O")
+    DiceRoll-=1
+else:
+    print(DiceOutPut)
+# outputs the result    
+while DiceRoll2>0:
+    DiceOutPut2.insert(0, "O")
+    DiceRoll2-=1
+else:
+    print(DiceOutPut2)    
+# outputs the result    
