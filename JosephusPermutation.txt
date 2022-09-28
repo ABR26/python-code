@@ -1,0 +1,48 @@
+# Josephus permutation, Survivor??
+#A group of n prisoners stand in a circle awaiting execution. Starting from an arbitrary position(0), the executioner kills every kth person until one person remains standing, who is then granted freedom (see examples).
+#Create a function that takes 2 arguments — the number of people to be executed n, and the step size k, and returns the original position (index) of the person who survives.
+List = []
+List2 = []
+def Josephus_Permutation():
+    print("Please enter your sample size")
+    n = input()
+    n = int(n)
+    while n>0:
+        List.insert(-0, n)
+        n-=1
+        print(List)
+    #Creates the list using a while loop  
+    a = 1
+    print("Please enter your step size")
+    k = input()
+    k = int(k)
+    #Builds a new list of values to remove from first List.  
+    while ((k*a) < len(List)) and (len(List)>0):
+        List2.insert(0, List[k*a])
+        print("List 2 ,",List2)
+        print("List ,",List)
+        a+=1 
+        #Removes the eliminated values 
+        for i in List and List2:
+            if i in List and List2:
+                List.remove(i)
+                print("List 2 ,",List2)
+                print("List ,", List,)
+        a = 1
+        # Resets the counter to 1
+        # Sifts through the list when it is smaller
+        # than the step length k using remainder division 
+    while len(List)>=2:
+        k = (k)//(len(List))
+        k = k-1
+        print(k)
+        List2.insert(0, List[k])
+        print("List 2 ,",List2)
+        print("List ,",List)
+        for i in (List and List2):
+            if i in List and List2:
+                List.remove(i)
+                #Returns the result as the location of the survivor 
+                print("List 2 ,",List2)
+                print("Index position of survivor is,", List,)
+Josephus_Permutation()
