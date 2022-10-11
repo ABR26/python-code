@@ -1,0 +1,21 @@
+# Bingo Version 2, Live in sequence, with player feedback...
+import random
+import time
+PlayersNumbers = []
+BingoCall = []
+for i in range(1,5):
+    a = random.randrange(1,60)
+    PlayersNumbers.insert(0,a)
+    a+=1 
+print("Your Bingo selection list is:",PlayersNumbers)
+while i in range(1,20):
+    b = random.randrange(1,60)
+    BingoCall.insert(0,b)
+    if BingoCall[0] in PlayersNumbers:
+        print("BINGO congratulations!!! 8-) your have won", BingoCall, "Is the number")
+        exit()
+    else:
+        time.sleep(3)
+        print("Bad luck", BingoCall , "Is the number, your list is", PlayersNumbers)
+        BingoCall.pop(0)
+    i+=1    
