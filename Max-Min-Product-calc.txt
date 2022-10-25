@@ -1,0 +1,30 @@
+# Maximum and minimum product triplets.
+import random
+# Evaluating the possible high and low values from this list
+List = []
+List2 = []
+a = 0
+#Generates a list of five integers
+while a < 5:
+    s = random.randint(0,100)
+    List.insert(-1,s)
+    a+=1
+print("Initial list",List)
+a = 0
+x = 0
+# Generates a second list of three numbers from the first list for multiplication 
+while x<100:
+    f = List[random.randint(0,len(List)-1)]
+    g = List[random.randint(0,len(List)-1)]
+    h = List[random.randint(0,len(List)-1)]
+# Adds different products of any three different numbers from the first list.  
+    if f!=g!=h:
+        l = f*g*h
+        List2.append(l)
+    x+=1    
+print("Product list",List2)
+# Returns the high and low values from this second list        
+print("Maximum product:",max(List2), "Minimum product:",min(List2))
+
+
+
