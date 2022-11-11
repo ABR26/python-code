@@ -1,0 +1,14 @@
+# Calculator for assessing relative performance accross any distance for running(including non standard distances).
+import math
+T1 = 136.9
+D1 = int(800)
+D2 = int(5000)
+Limit = int(42100)
+s = (math.log(0.00009*(math.sin(D1/Limit))))
+p = (math.log(0.00009*(math.sin(D2/Limit))))
+Y = (s/p)
+R1 = (T1/D1)*Y 
+R1 = R1*D2 
+
+print("Your estimated time for",D2,"metres is",int(R1/60),"Minutes :",int(R1%60), "Seconds")
+
