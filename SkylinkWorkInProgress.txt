@@ -1,0 +1,39 @@
+#Skylink mark 2. Service Mon - Fri Nottingham - Long Eaton - EMA   
+NottinghamFriarLaneAM = [1200,1300,1400,1500,1330,1600,1620,1640,1700.1715,1735,1755,1815,1835,
+1855,1915,1935,1955,2015,2040,2100,2120,2140,2200,2220,2240,2300,2320,2340,2400]
+NottinghamFriarLanePM = [1220,1240,1300,1320,1340,1400,1420,1440,1500,1520,1540,1600,1625,1650,1710,
+1730,1750,1810,1835,1900,2000,2100,2200,2300]
+Stop_timesAM = {"NottinghamBroadmarsh":3,"QMC":10,"Beeston":15,"LongEaton":30,"LongEatonStation":34,
+"CastleDonington":44,"EastMidlandsAirportDHL":50,"EastMidlandsAirport":54,"PegasusBusinessPark":56,
+"EastMidlandsGateway":58} 
+Stop_timesPM = {"NottinghamBroadmarsh":3,"QMC":10,"Beeston":15,"LongEaton":32,"LongEatonStation":36,
+"CastleDonington":50,"EastMidlandsAirportDHL":56,"EastMidlandsAirport":60,"PegasusBusinessPark":64,
+"EastMidlandsGateway":66} 
+print("Please type your start point")
+Start = input()
+print("Please type your end point")
+Stop = input()
+print("Please type your start time")
+JourneyTime = input()
+print("Is your journey for the morning or afternoon")
+AMPM = input()
+JourneyTime = int(JourneyTime)
+if AMPM == "morning":
+    for i in NottinghamFriarLaneAM:
+        p = JourneyTime/i 
+        print(p)
+        if 0.94 <= p <= 0.97 and i>(JourneyTime+Stop_timesAM[Start]):
+            print(i)
+            print("Your first available Bus from",Start,"is",i+Stop_timesAM[Start])
+            print("Your expected arrival at",Stop,"is",i+Stop_timesAM[Stop])
+            break
+if AMPM == "afternoon":
+    for i in NottinghamFriarLanePM:
+        p = JourneyTime/i 
+        print(p)
+        if 0.94 <= p <= 0.97 and i>(JourneyTime+Stop_timesAM[Start]):
+            print(i)
+            print("Your first available Bus from",Start,"is",i+Stop_timesPM[Start])
+            print("Your expected arrival at",Stop,"is",i+Stop_timesPM[Stop])
+            break        
+        
